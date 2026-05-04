@@ -1,0 +1,62 @@
+/* ── LMS Courses Table v4 ── */
+:root { --abct-primary:#1A5276; --abct-accent:#B7950B; }
+
+.abct-wrapper { direction:rtl; font-family:'Segoe UI',Tahoma,Arial,sans-serif; font-size:14px; color:#222; margin:1rem 0; }
+
+.abct-categories-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+.abct-cat-tab { padding:8px 18px; border-radius:8px; border:1.5px solid var(--abct-primary); background:transparent; color:var(--abct-primary); font-size:13px; font-weight:500; cursor:pointer; transition:background .18s,color .18s; white-space:nowrap; }
+.abct-cat-tab:hover { background:#d6e8f5; }
+.abct-cat-tab.abct-active { background:var(--abct-primary); color:#fff; }
+
+.abct-controls-bar { display:flex; align-items:center; gap:16px; margin-bottom:14px; flex-wrap:wrap; justify-content:space-between; }
+
+.abct-mode-toggle { display:flex; border:1.5px solid var(--abct-primary); border-radius:8px; overflow:hidden; }
+.abct-mode-btn { padding:7px 20px; background:transparent; border:none; color:var(--abct-primary); font-size:13px; font-weight:500; cursor:pointer; transition:background .15s,color .15s; }
+.abct-mode-btn+.abct-mode-btn { border-right:1.5px solid var(--abct-primary); }
+.abct-mode-btn:hover { background:#d6e8f5; }
+.abct-mode-btn.abct-mode-active { background:var(--abct-primary); color:#fff; }
+
+.abct-search-wrap { display:flex; align-items:center; gap:10px; margin-right:auto; }
+.abct-search-label { font-size:13px; color:#444; white-space:nowrap; }
+.abct-search { direction:rtl; font-size:13px; padding:7px 12px; border:1px solid #ccc; border-radius:6px; min-width:200px; outline:none; transition:border-color .2s; }
+.abct-search:focus { border-color:var(--abct-primary); }
+
+.abct-table-wrap { overflow-x:auto; border-radius:8px; border:1px solid #dde3ea; }
+.abct-table { width:100%; border-collapse:collapse; background:#fff; min-width:600px; }
+.abct-table thead tr { background:#d6e8f5; }
+.abct-table thead th { padding:12px 14px; font-weight:600; font-size:13px; text-align:right; color:var(--abct-primary); white-space:nowrap; }
+.abct-table tbody tr { border-bottom:1px solid #eef0f3; transition:background .13s; }
+.abct-table tbody tr:last-child { border-bottom:none; }
+.abct-table tbody tr:hover { background:#f4f8fb; }
+.abct-table tbody tr.abct-row-full { opacity:.75; }
+.abct-table td { padding:11px 14px; vertical-align:middle; }
+
+.abct-course-name { font-weight:500; }
+.abct-date-cell,.abct-time-cell,.abct-meta-cell { font-size:13px; color:#555; }
+.abct-price-cell { font-weight:600; color:var(--abct-primary); font-size:13px; }
+.abct-free { color:#27ae60 !important; }
+.abct-seats-full { color:#e74c3c !important; }
+
+.abct-badge-full { display:inline-block; background:#e74c3c; color:#fff; font-size:10px; padding:2px 7px; border-radius:20px; margin-right:6px; font-weight:500; vertical-align:middle; }
+
+.abct-link-detail { color:var(--abct-accent); font-size:13px; text-decoration:underline; text-underline-offset:2px; }
+.abct-link-detail:hover { opacity:.75; color:var(--abct-accent); }
+
+.abct-btn-register { display:inline-flex; align-items:center; gap:5px; font-size:13px; color:var(--abct-primary); border:1px solid var(--abct-primary); border-radius:6px; padding:5px 12px; text-decoration:none; background:transparent; transition:background .15s,color .15s; white-space:nowrap; }
+.abct-btn-register:hover { background:var(--abct-primary); color:#fff; }
+.abct-btn-disabled { display:inline-block; font-size:13px; color:#999; border:1px solid #ddd; border-radius:6px; padding:5px 12px; cursor:default; white-space:nowrap; }
+
+.abct-empty { text-align:center; color:#999; padding:30px !important; }
+
+.abct-pagination { display:flex; align-items:center; gap:4px; margin-top:14px; flex-wrap:wrap; }
+.abct-page-btn { min-width:32px; height:32px; border:1px solid #dde3ea; border-radius:6px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; font-size:13px; background:#fff; color:#333; padding:0 8px; transition:background .13s; }
+.abct-page-btn:hover { background:#f0f4f8; }
+.abct-page-btn:disabled { opacity:.35; cursor:default; pointer-events:none; }
+.abct-page-btn.abct-active { background:var(--abct-primary); color:#fff; border-color:var(--abct-primary); }
+.abct-page-dots,.abct-page-count { font-size:13px; color:#aaa; padding:0 4px; }
+
+@media (max-width:640px) {
+    .abct-controls-bar { flex-direction:column; align-items:flex-start; }
+    .abct-search { min-width:0; width:100%; }
+    .abct-table thead th,.abct-table td { padding:9px 10px; font-size:12px; }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wpml-config>
+
+    <!--
+        WPML Config for LMS Courses Table
+        يخلي WPML يترجم كل النصوص والإعدادات في البلجن
+    -->
+
+    <!-- ── Admin settings strings ── -->
+    <admin-texts>
+        <key name="abct_settings">
+            <!-- نصوص قابلة للترجمة من الإعدادات -->
+            <key name="no_seats_label" />
+        </key>
+    </admin-texts>
+
+    <!-- ── Custom Post Type: Tutor LMS courses ── -->
+    <custom-types>
+        <custom-type translate="1">courses</custom-type>
+    </custom-types>
+
+    <!-- ── Tutor LMS taxonomy ── -->
+    <taxonomies>
+        <taxonomy translate="1">course-category</taxonomy>
+        <taxonomy translate="1">course-tag</taxonomy>
+    </taxonomies>
+
+    <!-- ── Shortcode strings ── -->
+    <shortcodes>
+        <shortcode>
+            <tag>abct_courses_table</tag>
+            <attributes>
+                <attribute>no_seats_label</attribute>
+                <attribute>registration_page</attribute>
+            </attributes>
+        </shortcode>
+    </shortcodes>
+
+</wpml-config>
